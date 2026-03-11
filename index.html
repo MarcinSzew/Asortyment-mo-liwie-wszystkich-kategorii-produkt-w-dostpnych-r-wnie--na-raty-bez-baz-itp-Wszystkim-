@@ -3,157 +3,247 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premium Laptopy i Stacje Robocze – Strona Główna</title>
+<title>Premium IT – Laptopy i Smartfony</title>
 <style>
-body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; background-color: #f9f9f9; }
+body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
 h1 { color: #1a3e5c; }
-h2 { color: #2a5d84; margin-top: 30px; border-bottom: 2px solid #ccc; padding-bottom: 5px;}
+h2 { color: #2a5d84; margin-top: 30px; }
 ul { margin-left: 20px; }
-.model { margin-bottom: 25px; border-bottom: 1px solid #ddd; padding-bottom: 15px; background: #fff; padding: 10px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);}
+.model { margin-bottom: 20px; }
 .specs { font-size: 0.9em; color: #555; }
-.price { font-weight: bold; color: #b12704; }
-img { display: block; margin: 5px 0; max-width: 220px; }
-a { text-decoration: none; color: #1a0dab; }
-nav ul { list-style: none; padding-left: 0; display: flex; gap: 15px; }
-nav li { display: inline-block; }
-iframe { border: 1px solid #ccc; margin-top: 10px; }
+.price { font-weight: bold; color: #222; }
+img { margin-top: 5px; margin-bottom: 5px; border-radius: 8px; }
+label { margin-right: 5px; }
+input { margin-right: 10px; width: 60px; }
+button { margin-top: 5px; }
+.installment-result { margin-top: 5px; font-weight: bold; color: #1a3e5c; }
 </style>
 </head>
 <body>
 
-<h1>Premium Laptopy i Mobilne Stacje Robocze – Oferta Główna</h1>
-<p>Najwyższa jakość dla biznesu, gaming i kreatywnej pracy.</p>
+<h1>Premium IT – Laptopy, Stacje Robocze i Smartfony Gaming</h1>
 
-<!-- Menu nawigacyjne -->
-<nav>
+<!-- ================= Lenovo Premium ================= -->
+<h2 id="lenovo">💻 Lenovo – Premium Laptopy i Stacje Robocze</h2>
 <ul>
-  <li><a href="#lenovo">Lenovo</a></li>
-  <li><a href="#dell">Dell</a></li>
-  <li><a href="#hp">HP</a></li>
-  <li><a href="#msi">MSI</a></li>
-</ul>
-</nav>
-
-<!-- Lenovo Premium -->
-<h2 id="lenovo">💻 Lenovo – Premium</h2>
-<ul>
-<li class="model">
-  <strong>ThinkPad X1 Carbon Gen 13</strong><br>
+<li class="model" data-category="Biznes">
+  <strong>ThinkPad X1 Carbon</strong><br>
   <span class="specs">Ultrabook, Intel i7, 16GB RAM, 512GB SSD</span><br>
-  <span class="price">Cena: ~15 000 zł</span>
-  <img src="https://laptopfactory.pl/Laptop-Lenovo-ThinkPad-X1-Carbon-Gen9-i7-1185G7-16GB-FHDplus-US(3).JPG" alt="ThinkPad X1 Carbon">
+  <span class="price" data-price="6999">Cena: 6 999 zł</span><br>
+  <label>Liczba rat:</label><input type="number" min="1" max="60" value="12" class="installment-months">
+  <label>Oprocentowanie %:</label><input type="number" min="0" value="10" class="installment-rate">
+  <button onclick="calculateInstallment(this)">Oblicz ratę</button>
+  <div class="installment-result"></div>
 </li>
-<li class="model">
-  <strong>ThinkPad X1 Yoga</strong><br>
-  <span class="specs">Konwertowalny, Intel i7, 16GB RAM, 512GB SSD</span><br>
-  <span class="price">Cena: ~16 500 zł</span>
+<li class="model" data-category="Biznes">
+  <strong>ThinkPad P1</strong><br>
+  <span class="specs">Mobilna stacja robocza, Intel i9, 32GB RAM, 1TB SSD, CAD/Grafika</span><br>
+  <span class="price" data-price="12999">Cena: 12 999 zł</span><br>
+  <label>Liczba rat:</label><input type="number" min="1" max="60" value="12" class="installment-months">
+  <label>Oprocentowanie %:</label><input type="number" min="0" value="10" class="installment-rate">
+  <button onclick="calculateInstallment(this)">Oblicz ratę</button>
+  <div class="installment-result"></div>
 </li>
-<li class="model">
-  <strong>ThinkPad P16</strong><br>
-  <span class="specs">Mobilna stacja robocza, Intel i9, 32GB RAM, 1TB SSD, CAD / 3D</span><br>
-  <span class="price">Cena: ~18 500 zł</span>
-</li>
-<li class="model">
+<li class="model" data-category="Gaming">
   <strong>Legion 7</strong><br>
   <span class="specs">Gaming, AMD Ryzen 9, 32GB RAM, RTX 3080, 1TB SSD</span><br>
-  <span class="price">Cena: ~19 000 zł</span>
+  <span class="price" data-price="13999">Cena: 13 999 zł</span><br>
+  <label>Liczba rat:</label><input type="number" min="1" max="60" value="12" class="installment-months">
+  <label>Oprocentowanie %:</label><input type="number" min="0" value="10" class="installment-rate">
+  <button onclick="calculateInstallment(this)">Oblicz ratę</button>
+  <div class="installment-result"></div>
 </li>
-<li class="model">
-  <strong>Legion 5 Pro</strong><br>
-  <span class="specs">Gaming, AMD Ryzen 7, 32GB RAM, RTX 3070, 1TB SSD</span><br>
-  <span class="price">Cena: ~13 500 zł</span>
+<li class="model" data-category="Biznes">
+  <strong>ThinkPad T16</strong><br>
+  <span class="specs">Intel i7, 16GB RAM, 1TB SSD</span><br>
+  <span class="price" data-price="7499">Cena: 7 499 zł</span><br>
+  <label>Liczba rat:</label><input type="number" min="1" max="60" value="12" class="installment-months">
+  <label>Oprocentowanie %:</label><input type="number" min="0" value="10" class="installment-rate">
+  <button onclick="calculateInstallment(this)">Oblicz ratę</button>
+  <div class="installment-result"></div>
+</li>
+<li class="model" data-category="Biznes">
+  <strong>IdeaPad 5 15"</strong><br>
+  <span class="specs">Intel i7, 16GB RAM, 512GB SSD</span><br>
+  <span class="price" data-price="3799">Cena: 3 799 zł</span><br>
+  <label>Liczba rat:</label><input type="number" min="1" max="60" value="12" class="installment-months">
+  <label>Oprocentowanie %:</label><input type="number" min="0" value="10" class="installment-rate">
+  <button onclick="calculateInstallment(this)">Oblicz ratę</button>
+  <div class="installment-result"></div>
 </li>
 </ul>
 
-<!-- Dell Premium -->
-<h2 id="dell">💻 Dell – Premium</h2>
+<!-- ================= Dell Premium ================= -->
+<h2 id="dell">💻 Dell – Premium Laptopy i Stacje Robocze</h2>
 <ul>
-<li class="model">
+<li class="model" data-category="Biznes">
   <strong>XPS 15 OLED</strong><br>
-  <span class="specs">Ultrabook kreatywny, Intel i7, 16GB RAM, OLED 4K</span><br>
-  <span class="price">Cena: ~12 500 zł</span>
+  <span class="specs">Intel i7, 16GB RAM, OLED 4K</span><br>
+  <span class="price" data-price="8999">Cena: 8 999 zł</span><br>
+  <label>Liczba rat:</label><input type="number" min="1" max="60" value="12" class="installment-months">
+  <label>Oprocentowanie %:</label><input type="number" min="0" value="10" class="installment-rate">
+  <button onclick="calculateInstallment(this)">Oblicz ratę</button>
+  <div class="installment-result"></div>
 </li>
-<li class="model">
-  <strong>Latitude 7430</strong><br>
-  <span class="specs">Biznesowy, Intel i7, 32GB RAM, 1TB SSD</span><br>
-  <span class="price">Cena: ~11 000 zł</span>
-</li>
-<li class="model">
+<li class="model" data-category="Biznes">
   <strong>Precision 17</strong><br>
   <span class="specs">Mobilna stacja robocza, Intel i9, 64GB RAM, 2TB SSD</span><br>
-  <span class="price">Cena: ~20 000 zł</span>
+  <span class="price" data-price="23999">Cena: 23 999 zł</span><br>
+  <label>Liczba rat:</label><input type="number" min="1" max="60" value="12" class="installment-months">
+  <label>Oprocentowanie %:</label><input type="number" min="0" value="10" class="installment-rate">
+  <button onclick="calculateInstallment(this)">Oblicz ratę</button>
+  <div class="installment-result"></div>
 </li>
-<li class="model">
-  <strong>Alienware m18</strong><br>
-  <span class="specs">Gaming premium, Intel i9, RTX 4080, 32GB RAM</span><br>
-  <span class="price">Cena: ~24 000 zł</span>
+<li class="model" data-category="Gaming">
+  <strong>Alienware m16</strong><br>
+  <span class="specs">Intel i9, RTX 4070, 32GB RAM</span><br>
+  <span class="price" data-price="15499">Cena: 15 499 zł</span><br>
+  <label>Liczba rat:</label><input type="number" min="1" max="60" value="12" class="installment-months">
+  <label>Oprocentowanie %:</label><input type="number" min="0" value="10" class="installment-rate">
+  <button onclick="calculateInstallment(this)">Oblicz ratę</button>
+  <div class="installment-result"></div>
 </li>
-<li class="model">
-  <strong>G15 Gaming</strong><br>
-  <span class="specs">Gaming średnia/premium, Intel i7, RTX 3060, 16GB RAM</span><br>
-  <span class="price">Cena: ~7 500 zł</span>
+<li class="model" data-category="Biznes">
+  <strong>Latitude 7430</strong><br>
+  <span class="specs">Intel i7, 32GB RAM, 1TB SSD</span><br>
+  <span class="price" data-price="9999">Cena: 9 999 zł</span><br>
+  <label>Liczba rat:</label><input type="number" min="1" max="60" value="12" class="installment-months">
+  <label>Oprocentowanie %:</label><input type="number" min="0" value="10" class="installment-rate">
+  <button onclick="calculateInstallment(this)">Oblicz ratę</button>
+  <div class="installment-result"></div>
+</li>
+<li class="model" data-category="Codzienny">
+  <strong>Inspiron 16 Plus</strong><br>
+  <span class="specs">Intel i7, 16GB RAM, 512GB SSD</span><br>
+  <span class="price" data-price="4999">Cena: 4 999 zł</span><br>
+  <label>Liczba rat:</label><input type="number" min="1" max="60" value="12" class="installment-months">
+  <label>Oprocentowanie %:</label><input type="number" min="0" value="10" class="installment-rate">
+  <button onclick="calculateInstallment(this)">Oblicz ratę</button>
+  <div class="installment-result"></div>
 </li>
 </ul>
 
-<!-- HP Premium -->
-<h2 id="hp">💻 HP – Premium</h2>
+<!-- ================= HP Premium ================= -->
+<h2 id="hp">💻 HP – Premium Laptopy i Stacje Robocze</h2>
 <ul>
-<li class="model">
-  <strong>Spectre x360</strong><br>
-  <span class="specs">Konwertowalny premium, Intel i7, 16GB RAM, 512GB SSD</span><br>
-  <span class="price">Cena: ~9 500 zł</span>
-</li>
-<li class="model">
+<li class="model" data-category="Gaming">
   <strong>Omen 17</strong><br>
-  <span class="specs">Gaming, Intel i9, RTX 3070, 32GB RAM</span><br>
-  <span class="price">Cena: ~12 500 zł</span>
+  <span class="specs">Intel i9, RTX 3070, 32GB RAM</span><br>
+  <span class="price" data-price="10999">Cena: 10 999 zł</span><br>
+  <label>Liczba rat:</label><input type="number" min="1" max="60" value="12" class="installment-months">
+  <label>Oprocentowanie %:</label><input type="number" min="0" value="10" class="installment-rate">
+  <button onclick="calculateInstallment(this)">Oblicz ratę</button>
+  <div class="installment-result"></div>
 </li>
-<li class="model">
-  <strong>ZBook Fury 17 G9</strong><br>
-  <span class="specs">Mobilna stacja robocza, Intel i9, 64GB RAM, 2TB SSD</span><br>
-  <span class="price">Cena: ~22 000 zł</span>
+<li class="model" data-category="Biznes">
+  <strong>ZBook Fury</strong><br>
+  <span class="specs">Intel i9, 64GB RAM, 2TB SSD, CAD / Grafika</span><br>
+  <span class="price" data-price="22999">Cena: 22 999 zł</span><br>
+  <label>Liczba rat:</label><input type="number" min="1" max="60" value="12" class="installment-months">
+  <label>Oprocentowanie %:</label><input type="number" min="0" value="10" class="installment-rate">
+  <button onclick="calculateInstallment(this)">Oblicz ratę</button>
+  <div class="installment-result"></div>
 </li>
-<li class="model">
-  <strong>EliteBook 850 G10</strong><br>
-  <span class="specs">Biznes premium, Intel i7, 16GB RAM, 512GB SSD</span><br>
-  <span class="price">Cena: ~10 500 zł</span>
+<li class="model" data-category="Biznes">
+  <strong>EliteBook 800 Series</strong><br>
+  <span class="specs">Intel i7, 16GB RAM, 512GB SSD</span><br>
+  <span class="price" data-price="7499">Cena: 7 499 zł</span><br>
+  <label>Liczba rat:</label><input type="number" min="1" max="60" value="12" class="installment-months">
+  <label>Oprocentowanie %:</label><input type="number" min="0" value="10" class="installment-rate">
+  <button onclick="calculateInstallment(this)">Oblicz ratę</button>
+  <div class="installment-result"></div>
 </li>
-<li class="model">
-  <strong>Victus 16</strong><br>
-  <span class="specs">Gaming średnia półka, Intel i7, RTX 3060, 16GB RAM</span><br>
-  <span class="price">Cena: ~6 500 zł</span>
+<li class="model" data-category="Gaming">
+  <strong>Omen 16</strong><br>
+  <span class="specs">Intel i7, RTX 3060, 16GB RAM</span><br>
+  <span class="price" data-price="6499">Cena: 6 499 zł</span><br>
+  <label>Liczba rat:</label><input type="number" min="1" max="60" value="12" class="installment-months">
+  <label>Oprocentowanie %:</label><input type="number" min="0" value="10" class="installment-rate">
+  <button onclick="calculateInstallment(this)">Oblicz ratę</button>
+  <div class="installment-result"></div>
+</li>
+<li class="model" data-category="Biznes">
+  <strong>ProBook 600 Series</strong><br>
+  <span class="specs">Intel i5, 8–16GB RAM, 256–512GB SSD</span><br>
+  <span class="price" data-price="3999">Cena: 3 999 zł</span><br>
+  <label>Liczba rat:</label><input type="number" min="1" max="60" value="12" class="installment-months">
+  <label>Oprocentowanie %:</label><input type="number" min="0" value="10" class="installment-rate">
+  <button onclick="calculateInstallment(this)">Oblicz ratę</button>
+  <div class="installment-result"></div>
 </li>
 </ul>
 
-<!-- MSI Premium -->
-<h2 id="msi">💻 MSI – Premium</h2>
+<!-- ================= Nubia Redmagic – Smartfony Gaming Premium ================= -->
+<h2 id="redmagic">📱 NUBIA Redmagic – Smartfony Gaming Premium</h2>
 <ul>
-<li class="model">
-  <strong>MSI Titan 18 HX</strong><br>
-  <span class="specs">Gaming premium, Intel i9, RTX 4090, 32GB RAM</span><br>
-  <span class="price">Cena: ~24 000 zł</span>
+<li class="model" data-category="Gaming">
+  <strong>Redmagic 11 Pro</strong><br>
+  <a href="https://www.youtube.com/watch?v=NZHz2unS3qs" target="_blank">
+    <img src="https://img.youtube.com/vi/NZHz2unS3qs/0.jpg" alt="Redmagic 11 Pro" width="180">
+  </a><br>
+  <span class="specs">Snapdragon 8 Elite Gen 5, 16–24GB RAM, 512GB/1TB, 6,85″ AMOLED 144 Hz, chłodzenie cieczą</span><br>
+  <span class="price" data-price="4250">Cena: ~4 250 zł</span><br>
+  <a href="https://www.youtube.com/watch?v=NZHz2unS3qs" target="_blank">▶️ Recenzja i test</a><br>
+  <label>Liczba rat:</label><input type="number" min="1" max="60" value="12" class="installment-months">
+  <label>Oprocentowanie %:</label><input type="number" min="0" value="10" class="installment-rate">
+  <button onclick="calculateInstallment(this)">Oblicz ratę</button>
+  <div class="installment-result"></div>
 </li>
-<li class="model">
-  <strong>MSI CreatorPro Z16P</strong><br>
-  <span class="specs">Mobilna stacja robocza, Intel i9, 32GB RAM, 1TB SSD</span><br>
-  <span class="price">Cena: ~21 500 zł</span>
+<li class="model" data-category="Gaming">
+  <strong>Redmagic 11 Pro+</strong><br>
+  <img src="https://img.youtube.com/vi/NZHz2unS3qs/0.jpg" alt="Redmagic 11 Pro+" width="180"><br>
+  <span class="specs">Snapdragon 8 Elite Gen 5+, 24GB RAM, 1TB</span><br>
+  <span class="price" data-price="5133">Cena: ~5 133 zł</span><br>
+  <label>Liczba rat:</label><input type="number" min="1" max="60" value="12" class="installment-months">
+  <label>Oprocentowanie %:</label><input type="number" min="0" value="10" class="installment-rate">
+  <button onclick="calculateInstallment(this)">Oblicz ratę</button>
+  <div class="installment-result"></div>
 </li>
-<li class="model">
-  <strong>MSI Raider 18 HX</strong><br>
-  <span class="specs">Gaming wysoka półka, Intel i9, RTX 4080</span><br>
-  <span class="price">Cena: ~18 500 zł</span>
+<li class="model" data-category="Gaming">
+  <strong>Redmagic 10 Pro</strong><br>
+  <img src="https://img.youtube.com/vi/bn07A9KcsAI/0.jpg" alt="Redmagic 10 Pro" width="180"><br>
+  <span class="specs">Snapdragon 8, 16GB RAM, 512GB/1TB, 144 Hz AMOLED</span><br>
+  <span class="price" data-price="3600">Cena: ~3 600 zł</span><br>
+  <a href="https://www.youtube.com/watch?v=bn07A9KcsAI" target="_blank">▶️ Recenzja</a><br>
+  <label>Liczba rat:</label><input type="number" min="1" max="60" value="12" class="installment-months">
+  <label>Oprocentowanie %:</label><input type="number" min="0" value="10" class="installment-rate">
+  <button onclick="calculateInstallment(this)">Oblicz ratę</button>
+  <div class="installment-result"></div>
 </li>
-<li class="model">
-  <strong>MSI Stealth 17</strong><br>
-  <span class="specs">Gaming ultrabook, Intel i7, RTX 3070, 16GB RAM</span><br>
-  <span class="price">Cena: ~14 500 zł</span>
+<li class="model" data-category="Gaming">
+  <strong>Redmagic 9S Pro</strong><br>
+  <img src="https://img.youtube.com/vi/bn07A9KcsAI/0.jpg" alt="Redmagic 9S Pro" width="180"><br>
+  <span class="specs">Snapdragon 8 Gen 3, 16GB RAM, 512GB, 144 Hz</span><br>
+  <span class="price" data-price="3899">Cena: ~3 899 zł</span><br>
+  <label>Liczba rat:</label><input type="number" min="1" max="60" value="12" class="installment-months">
+  <label>Oprocentowanie %:</label><input type="number" min="0" value="10" class="installment-rate">
+  <button onclick="calculateInstallment(this)">Oblicz ratę</button>
+  <div class="installment-result"></div>
 </li>
-<li class="model">
-  <strong>MSI Summit E16 AI Evo</strong><br>
-  <span class="specs">Ultrabook premium, Intel i7, 16GB RAM, 512GB SSD</span><br>
-  <span class="price">Cena: ~5 998 zł</span>
+<li class="model" data-category="Gaming">
+  <strong>Redmagic 11 Air</strong><br>
+  <img src="https://img.youtube.com/vi/bn07A9KcsAI/0.jpg" alt="Redmagic 11 Air" width="180"><br>
+  <span class="specs">Snapdragon premium, 144 Hz AMOLED, bateria 7 000 mAh</span><br>
+  <span class="price" data-price="3299">Cena: ~3 299 zł</span><br>
+  <label>Liczba rat:</label><input type="number" min="1" max="60" value="12" class="installment-months">
+  <label>Oprocentowanie %:</label><input type="number" min="0" value="10" class="installment-rate">
+  <button onclick="calculateInstallment(this)">Oblicz ratę</button>
+  <div class="installment-result"></div>
 </li>
 </ul>
+
+<!-- ================= Kalkulator Ratalny ================= -->
+<script>
+function calculateInstallment(button) {
+    const li = button.closest('.model');
+    const price = parseFloat(li.querySelector('.price').dataset.price);
+    const months = parseInt(li.querySelector('.installment-months').value);
+    const rate = parseFloat(li.querySelector('.installment-rate').value);
+    if(months <= 0) return alert("Podaj poprawną liczbę rat!");
+    const monthly = (price + price * rate/100)/months;
+    li.querySelector('.installment-result').innerText = `Rata miesięczna: ${monthly.toFixed(2)} zł`;
+}
+</script>
 
 </body>
 </html>
