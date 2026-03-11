@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Kalkulator rat</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<h1>Kalkulator leasingu / kredytu</h1>
+
+<input type="number" id="price" placeholder="Cena">
+
+<input type="number" id="months" placeholder="Liczba rat">
+
+<button onclick="calc()">Oblicz</button>
+
+<p id="result"></p>
+
+<script>
+
+function calc(){
+
+let price=document.getElementById("price").value
+
+let months=document.getElementById("months").value
+
+let rata=price/months
+
+document.getElementById("result").innerHTML="Rata: "+rata+" zł"
+
+}
+
+</script>
+
+</body>
+</html>
