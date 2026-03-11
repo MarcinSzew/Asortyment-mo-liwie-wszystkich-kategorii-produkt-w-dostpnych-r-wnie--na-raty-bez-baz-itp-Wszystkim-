@@ -5,4 +5,9 @@ repozytorium/
 │   └─ placeholder.jpg
 ├─ kategorie/
 │   ├─ 01-smartfony.html
-│   └─ 02-laptopy.html
+│   ├─ 02-laptopy.html
+│   ├─ 03-stacje-robocze.html
+│   ├─ 04-komputery.html
+│   ├─ 05-monitory.html
+│   ├─ 06-akcesoria-komputerowe.html
+│   ├─ ... (kolejne kategorie do 37)
