@@ -1,77 +1,105 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portal Premium IT</title>
-<style>
-body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; background-color: #f5f5f5; }
-h1 { color: #1a3e5c; }
-h2 { color: #2a5d84; margin-top: 30px; }
-ul { margin-left: 20px; }
-.product { background: #fff; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-.specs { font-size: 0.9em; color: #555; }
-.price { font-weight: bold; color: #c0392b; }
-button { padding: 8px 12px; margin-top: 5px; cursor: pointer; background-color: #2a5d84; color: #fff; border: none; border-radius: 4px; }
-nav a { margin-right: 15px; color: #2a5d84; text-decoration: none; }
-nav a:hover { text-decoration: underline; }
-form { margin-top: 30px; background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-form input, form textarea { width: 100%; margin-bottom: 10px; padding: 8px; border-radius: 4px; border: 1px solid #ccc; }
-</style>
+
+<title>Premium IT Store</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-<h1>Portal Premium IT</h1>
+<header>
+
+<h1>Premium IT Store</h1>
 
 <nav>
-  <a href="kategorie/01-smartfony-nubia-redmagic.html">Nubia Redmagic</a>
-  <a href="kategorie/02-smartfony-vivo.html">VIVO</a>
-  <a href="kategorie/03-smartfony-xiaomi.html">Xiaomi</a>
-  <a href="kategorie/04-smartfony-huawei.html">Huawei</a>
-  <a href="kategorie/05-smartfony-samsung.html">Samsung</a>
-  <!-- Dodaj linki do pozostałych kategorii -->
+
+<a href="index.html">Start</a>
+<a href="kategorie/01-smartfony.html">Smartfony</a>
+<a href="kategorie/02-laptopy.html">Laptopy</a>
+<a href="kategorie/03-stacje-robocze.html">Stacje robocze</a>
+<a href="kategorie/04-komputery.html">Komputery</a>
+<a href="kategorie/05-monitory.html">Monitory</a>
+
 </nav>
 
+</header>
+
+
+<section class="hero">
+
 <h2>Oferta Premium</h2>
+<p>Najlepszy sprzęt technologiczny klasy Premium</p>
+
+</section>
+
+
+<section class="products">
 
 <div class="product">
-  <h3>Przykładowy produkt</h3>
-  <ul>
-    <li>Opis parametru 1</li>
-    <li>Opis parametru 2</li>
-    <li>Opis parametru 3</li>
-  </ul>
-  <p class="price">Cena: wprowadź cenę Premium</p>
-  <img src="images/placeholder.jpg" alt="Produkt" style="width:200px;">
-  <button onclick="alert('Kalkulator rat w przygotowaniu')">Oblicz ratę</button>
+
+<h3>Nubia Redmagic Gaming</h3>
+
+<p>Snapdragon 8 Elite</p>
+<p>16-24GB RAM</p>
+<p>512GB / 1TB</p>
+
+<p class="price">Cena: edytuj</p>
+
+<button onclick="raty()">Oblicz ratę</button>
+
 </div>
 
-<h2>Formularz kontaktowy – testowy</h2>
-<form id="contactForm">
-  <input type="text" name="name" placeholder="Twoje imię" required>
-  <input type="email" name="email" placeholder="Twój email" required>
-  <textarea name="message" placeholder="Twoja wiadomość" rows="5" required></textarea>
-  <button type="submit">Wyślij (test)</button>
+
+<div class="product">
+
+<h3>Lenovo ThinkPad Workstation</h3>
+
+<p>Intel i9</p>
+<p>32GB RAM</p>
+<p>RTX GPU</p>
+
+<p class="price">Cena: edytuj</p>
+
+<button onclick="raty()">Oblicz ratę</button>
+
+</div>
+
+</section>
+
+
+<section class="kontakt">
+
+<h2>Kontakt</h2>
+
+<form id="form">
+
+<input type="text" placeholder="Imię" required>
+
+<input type="email" placeholder="Email" required>
+
+<textarea placeholder="Wiadomość"></textarea>
+
+<button type="submit">Wyślij</button>
+
 </form>
 
-<script>
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // zatrzymuje wysłanie formularza
-    const name = this.name.value;
-    const email = this.email.value;
-    const message = this.message.value;
+</section>
 
-    alert(
-      `Formularz testowy wysłany!\n\n` +
-      `Imię: ${name}\n` +
-      `Email: ${email}\n` +
-      `Wiadomość: ${message}`
-    );
 
-    // Czyści pola formularza po wysłaniu
-    this.reset();
-});
-</script>
+<footer>
+
+<p>Premium IT Store © 2026</p>
+
+</footer>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
