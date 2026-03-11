@@ -46,13 +46,32 @@ form input, form textarea { width: 100%; margin-bottom: 10px; padding: 8px; bord
   <button onclick="alert('Kalkulator rat w przygotowaniu')">Oblicz ratę</button>
 </div>
 
-<h2>Formularz kontaktowy</h2>
-<form action="https://formspree.io/f/moqrlrje" method="POST">
+<h2>Formularz kontaktowy – testowy</h2>
+<form id="contactForm">
   <input type="text" name="name" placeholder="Twoje imię" required>
-  <input type="email" name="_replyto" placeholder="Twój email" required>
+  <input type="email" name="email" placeholder="Twój email" required>
   <textarea name="message" placeholder="Twoja wiadomość" rows="5" required></textarea>
-  <button type="submit">Wyślij</button>
+  <button type="submit">Wyślij (test)</button>
 </form>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // zatrzymuje wysłanie formularza
+    const name = this.name.value;
+    const email = this.email.value;
+    const message = this.message.value;
+
+    alert(
+      `Formularz testowy wysłany!\n\n` +
+      `Imię: ${name}\n` +
+      `Email: ${email}\n` +
+      `Wiadomość: ${message}`
+    );
+
+    // Czyści pola formularza po wysłaniu
+    this.reset();
+});
+</script>
 
 </body>
 </html>
