@@ -3,32 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>01 - Smartfony Nubia Redmagic</title>
+<title>Portal Premium IT & Smartfony</title>
+<link rel="stylesheet" href="css/style.css">
 <style>
-body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; background-color: #f5f5f5; }
-h1 { color: #1a3e5c; }
-nav a { margin-right: 15px; color: #2a5d84; text-decoration: none; font-weight: bold; }
-nav a:hover { text-decoration: underline; }
-.category { background: #fff; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-.product { margin-bottom: 20px; }
-.product ul { margin-left: 20px; }
-.price { font-weight: bold; color: #c0392b; }
-button { padding: 8px 12px; cursor: pointer; background-color: #2a5d84; color: #fff; border: none; border-radius: 4px; margin-top: 5px; }
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f5f5; }
+header { background:#1a3e5c; color:white; padding:20px; text-align:center; }
+nav a { margin:0 15px; color:white; text-decoration:none; font-weight:bold; }
+nav a:hover { text-decoration:underline; }
+section { padding:20px; max-width:1200px; margin:auto; }
+.category, .product, .offer { background:white; padding:15px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); margin-bottom:20px; }
+button { padding:8px 12px; cursor:pointer; background-color:#2a5d84; color:white; border:none; border-radius:4px; margin-top:5px; }
+.price { font-weight:bold; color:#c0392b; }
+footer { background:#1a3e5c; color:white; text-align:center; padding:15px; }
 </style>
+<script>
+function calcRaty() {
+  alert("Kalkulator rat zostanie podłączony w kolejnym kroku.");
+}
+</script>
 </head>
 <body>
 
-<h1>Smartfony Nubia Redmagic</h1>
+<header>
+  <h1>Portal Premium IT & Smartfony</h1>
+  <nav>
+    <a href="index.html">Strona główna</a>
+    <a href="kategorie/01-smartfony.html">Smartfony</a>
+    <a href="kategorie/02-laptopy.html">Laptopy</a>
+    <a href="kategorie/03-komputery.html">Komputery</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+</header>
 
-<nav>
-  <a href="../index.html">Strona główna</a>
-  <a href="#kontakt">Kontakt</a>
-  <a href="02-smartfony-vivo.html">VIVO</a>
-  <a href="03-smartfony-xiaomi.html">Xiaomi</a>
-  <!-- Dodaj linki do pozostałych kategorii -->
-</nav>
+<section>
+  <h2>Oferta Premium – Finansowanie</h2>
 
-<div class="category">
+  <div class="offer">
+    <h3>Zwykła oferta – 84% całkowitej ceny detalicznej</h3>
+    <p>Oferta rynkowa dla pojedynczych zakupów detalicznych.</p>
+    <button onclick="calcRaty()">Oblicz ratę</button>
+  </div>
+
+  <div class="offer">
+    <h3>Oferta Premium – 77,55% całkowitej ceny w ramach globalnej umowy (O.W.U.)</h3>
+    <p>Oferta dla klientów premium z możliwością negocjacji poprzez e-mail lub czat.</p>
+    <button onclick="calcRaty()">Oblicz ratę</button>
+  </div>
+</section>
+
+<section>
+  <h2>Najlepsze produkty Premium</h2>
 
   <div class="product">
     <h3>Redmagic 10 Pro</h3>
@@ -39,15 +63,26 @@ button { padding: 8px 12px; cursor: pointer; background-color: #2a5d84; color: #
       <li>AMOLED 6.85" 144Hz</li>
       <li>7050 mAh</li>
     </ul>
-    <p class="price">Cena: (wprowadź cenę)</p>
-    <img src="../images/placeholder.jpg" alt="Redmagic 10 Pro" style="width:200px;">
-    <button onclick="alert('Kalkulator rat w przygotowaniu')">Oblicz ratę</button>
+    <p class="price">Cena: (edytuj)</p>
+    <img src="images/placeholder.jpg" alt="Redmagic 10 Pro" style="width:200px;">
+    <button onclick="calcRaty()">Oblicz ratę</button>
   </div>
 
-  <!-- Dodaj kolejne produkty analogicznie -->
-</div>
+  <div class="product">
+    <h3>Lenovo ThinkPad X1 Carbon</h3>
+    <ul>
+      <li>Ultrabook biznesowy</li>
+      <li>Intel i7, 16GB RAM, 512GB SSD</li>
+      <li>Wyświetlacz 14"</li>
+      <li>Do pracy kreatywnej i biurowej</li>
+    </ul>
+    <p class="price">Cena: (edytuj)</p>
+    <img src="images/placeholder.jpg" alt="ThinkPad X1 Carbon" style="width:200px;">
+    <button onclick="calcRaty()">Oblicz ratę</button>
+  </div>
+</section>
 
-<div id="kontakt" class="category">
+<section id="kontakt">
   <h2>Kontakt</h2>
   <p>Osoba do kontaktu: <strong>Marcin Szewczyk</strong></p>
   <p>Email: <a href="mailto:profesja.premium@gmail.com">profesja.premium@gmail.com</a></p>
@@ -61,7 +96,11 @@ button { padding: 8px 12px; cursor: pointer; background-color: #2a5d84; color: #
     <textarea placeholder="Treść zapytania" rows="4" required></textarea>
     <button type="submit">Wyślij zapytanie</button>
   </form>
-</div>
+</section>
+
+<footer>
+  <p>Portal Premium IT & Smartfony – Wszelkie prawa zastrzeżone © 2026</p>
+</footer>
 
 </body>
 </html>
