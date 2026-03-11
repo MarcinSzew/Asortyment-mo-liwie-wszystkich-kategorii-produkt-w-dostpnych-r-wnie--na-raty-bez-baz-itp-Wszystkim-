@@ -1,239 +1,128 @@
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
-
 <meta charset="UTF-8">
+<title>Oferty leasingu i finansowania sprzętu</title>
+
+<meta name="description" content="Oferty leasingu, kredytu inwestycyjnego oraz kupieckiego dla sprzętu IT, narzędzi, pojazdów i technologii.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>GLOBAL DROPSHIPPING</title>
-
-<meta name="description" content="GLOBAL DROPSHIPPING - prywatna platforma B2B oferująca luksusowe produkty technologiczne oraz usługi finansowo-handlowe i leasing uproszczony.">
-
-<meta name="keywords" content="GLOBAL DROPSHIPPING, dropshipping B2B, leasing uproszczony, zakupy ratalne">
-
-<meta name="author" content="Marcin Szewczyk">
-
-<link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
 <style>
 
 body{
 font-family:Arial;
+background:#f4f4f4;
 margin:0;
-background:#05070f;
-color:white;
 }
 
 header{
-background:linear-gradient(120deg,#0f1c3d,#05070f);
-padding:60px;
+background:#222;
+color:white;
+padding:20px;
 text-align:center;
 }
 
-.container{
-max-width:900px;
-margin:auto;
-padding:40px;
-}
-
-form{
-background:#0c1224;
-padding:20px;
-margin-bottom:20px;
-border-radius:8px;
-}
-
-input, textarea{
-width:100%;
+nav{
+background:#444;
 padding:10px;
-margin-bottom:10px;
-background:#05070f;
-border:none;
-color:white;
+text-align:center;
 }
 
-button{
-padding:10px 20px;
-background:#4da3ff;
-border:none;
+nav a{
 color:white;
-cursor:pointer;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
 }
 
-.card{
-background:#0c1224;
-padding:15px;
-margin-bottom:10px;
-border-radius:6px;
+section{
+padding:30px;
+}
+
+.kategorie{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.karta{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
-
-<h1>GLOBAL DROPSHIPPING</h1>
-
-<p>Prywatna platforma finansowo-handlowa</p>
-
-<p>
-
-Właściciel projektu:  
-Marcin Szewczyk  
-ul. Piotra Bardowskiego 10/8  
-58-302 Wałbrzych  
-Dolnośląskie Polska  
-
-</p>
-
-<p>
-
-Kontakt:  
-marcin.szewczyk12557@gmail.com
-
-</p>
-
+<h1>Platforma ofert finansowania sprzętu</h1>
+<p>Leasing • Kredyt inwestycyjny • Kredyt kupiecki</p>
 </header>
 
-<div class="container">
+<nav>
 
-<h2>Informacja o projekcie</h2>
+<a href="index.html">Strona główna</a>
+<a href="kategorie.html">Kategorie</a>
+<a href="oferty.html">Oferty producentów</a>
 
-<p>
+</nav>
 
-GLOBAL DROPSHIPPING jest prywatną platformą finansowo-handlową oferującą indywidualne oferty zakupowe produktów technologicznych oraz usług finansowania zakupów takich jak leasing uproszczony lub zakupy ratalne.
+<section>
 
-</p>
+<h2>Popularne kategorie</h2>
 
-<h2>Panel klienta B2B</h2>
+<div class="kategorie">
 
-<form id="offerForm">
+<div class="karta">
+<h3>Laptopy gamingowe</h3>
+<p>Lenovo Legion, Dell Alienware, ASUS ROG, MSI</p>
+</div>
 
-<input id="producer" placeholder="Producent">
+<div class="karta">
+<h3>Tablety i smartfony</h3>
+<p>Apple iPad, Apple iPhone, Microsoft Surface</p>
+</div>
 
-<input id="model" placeholder="Model produktu">
+<div class="karta">
+<h3>Narzędzia profesjonalne</h3>
+<p>Milwaukee, Festool, Bosch Professional, DeWalt, Makita</p>
+</div>
 
-<input id="quantity" placeholder="Ilość">
+<div class="karta">
+<h3>Motocykle</h3>
+<p>BMW, Yamaha, Ducati, Kawasaki</p>
+</div>
 
-<input id="price" placeholder="Oczekiwana cena">
+<div class="karta">
+<h3>Sprzęt DJ</h3>
+<p>Pioneer DJ, Denon DJ, Technics, Rane</p>
+</div>
 
-<textarea id="notes" placeholder="Uwagi"></textarea>
-
-<button>Wyślij zapytanie ofertowe</button>
-
-</form>
-
-<h3>Zapytania</h3>
-
-<div id="requests"></div>
-
-<h2>Generator ofert AI</h2>
-
-<textarea id="aiText" placeholder="Opis zapotrzebowania"></textarea>
-
-<button onclick="generateAI()">Generuj ofertę</button>
-
-<div id="aiResult"></div>
+<div class="karta">
+<h3>Kontrolery i syntezatory</h3>
+<p>Native Instruments, Akai Professional, Elektron, Korg</p>
+</div>
 
 </div>
 
-<script>
+</section>
 
-let requests=JSON.parse(localStorage.getItem("requests"))||[];
+<footer>
 
-function render(){
+© 2026 Platforma ofert finansowania
 
-let html="";
-
-requests.forEach(r=>{
-
-html+=`
-
-<div class="card">
-
-Producent: ${r.producer}<br>
-Model: ${r.model}<br>
-Ilość: ${r.quantity}<br>
-Cena: ${r.price}<br>
-Uwagi: ${r.notes}
-
-</div>
-
-`;
-
-});
-
-document.getElementById("requests").innerHTML=html;
-
-}
-
-document.getElementById("offerForm").addEventListener("submit",function(e){
-
-e.preventDefault();
-
-let r={
-
-producer:producer.value,
-model:model.value,
-quantity:quantity.value,
-price:price.value,
-notes:notes.value
-
-};
-
-requests.push(r);
-
-localStorage.setItem("requests",JSON.stringify(requests));
-
-render();
-
-});
-
-render();
-
-function generateAI(){
-
-let text=document.getElementById("aiText").value;
-
-let offer=
-
-"Propozycja oferty GLOBAL DROPSHIPPING:\n\n"+
-
-"Opis zapotrzebowania: "+text+"\n\n"+
-
-"Możliwe finansowanie:\n"+
-"- leasing uproszczony\n"+
-"- zakupy ratalne\n\n"+
-
-"Parametry produktu mogą zostać dostosowane do oczekiwań klienta.";
-
-document.getElementById("aiResult").innerText=offer;
-
-}
-
-</script>
-
-<script type="application/ld+json">
-
-{
- "@context": "https://schema.org",
- "@type": "Organization",
- "name": "GLOBAL DROPSHIPPING",
- "founder": "Marcin Szewczyk",
- "email": "marcin.szewczyk12557@gmail.com",
- "address": {
-   "@type": "PostalAddress",
-   "streetAddress": "ul. Piotra Bardowskiego 10/8",
-   "addressLocality": "Wałbrzych",
-   "addressCountry": "PL"
- }
-}
-
-</script>
+</footer>
 
 </body>
 </html>
