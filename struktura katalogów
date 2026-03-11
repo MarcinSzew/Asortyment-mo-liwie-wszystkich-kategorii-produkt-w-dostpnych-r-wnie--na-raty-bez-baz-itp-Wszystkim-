@@ -1,0 +1,9 @@
+/index.html          -> Strona główna z menu i ofertą Premium
+/kategorie/
+    01-smartfony-nubia-redmagic.html
+    02-smartfony-vivo.html
+    03-smartfony-xiaomi.html
+    ...
+    37-akcesoria-it.html
+/sitemap.xml
+/images/             -> Tutaj wgrasz zdjęcia produktów
