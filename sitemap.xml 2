@@ -1,26 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<url>
-  <loc>https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/index.html</loc>
-  <priority>1.0</priority>
-</url>
+  <!-- Strona główna -->
+  <url>
+    <loc>https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/</loc>
+    <priority>1.0</priority>
+  </url>
 
-<url>
-  <loc>https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/kategorie/01-smartfony-nubia-redmagic.html</loc>
-  <priority>0.9</priority>
-</url>
+  <!-- Kategorie produktów Premium -->
+  <url>
+    <loc>https://marcinszew.github.io/kategorie/01-smartfony-nubia-redmagic.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://marcinszew.github.io/kategorie/02-smartfony-vivo.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://marcinszew.github.io/kategorie/03-smartfony-xiaomi.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://marcinszew.github.io/kategorie/04-smartfony-huawei.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://marcinszew.github.io/kategorie/05-smartfony-samsung.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://marcinszew.github.io/kategorie/06-laptopy-lenovo.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://marcinszew.github.io/kategorie/07-laptopy-dell.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://marcinszew.github.io/kategorie/08-laptopy-hp.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://marcinszew.github.io/kategorie/09-laptopy-msi.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://marcinszew.github.io/kategorie/10-laptopy-alienware.html</loc>
+    <priority>0.9</priority>
+  </url>
 
-<url>
-  <loc>https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/kategorie/02-smartfony-vivo.html</loc>
-  <priority>0.9</priority>
-</url>
-
-<url>
-  <loc>https://marcinszew.github.io/Leasing-lub-Kredyt-inwestycyjny-lub-Kredyt-kupiecki-na-zaoferowane-indywidualnie-oferty/kategorie/03-smartfony-xiaomi.html</loc>
-  <priority>0.9</priority>
-</url>
-
-<!-- Dodaj pozostałe 34 podstrony kategorii w tym samym formacie -->
+  <!-- Kontynuacja kategorii do 37 -->
+  <url><loc>https://marcinszew.github.io/kategorie/11-microsoft-surface.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/12-ipad.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/13-iphone.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/14-stacje-robocze.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/15-monitory.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/16-komputery-all-in-one.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/17-komputery-stacjonarne.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/18-akcesoria-komputerowe.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/19-dell-precision.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/20-hp-zbook.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/21-msi-workstation.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/22-alienware-workstation.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/23-sieci-komputerowe.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/24-drukarki.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/25-skannery.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/26-projektory.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/27-akcesoria.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/28-kamery.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/29-glosniki.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/30-sieci-komputerowe-2.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/31-drukarki-2.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/32-skannery-2.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/33-projektory-2.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/34-akcesoria-projektory.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/35-akcesoria-komputerowe-2.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/36-akcesoria-mobilne.html</loc><priority>0.9</priority></url>
+  <url><loc>https://marcinszew.github.io/kategorie/37-smartfony-limited.html</loc><priority>0.9</priority></url>
 
 </urlset>
